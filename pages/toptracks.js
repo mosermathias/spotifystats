@@ -21,7 +21,7 @@ export default function TopTracks() {
       medium_term: "medium_term",
       long_term: "long_term"
     }
-    const url = 'http://localhost:3000/api/api_topTracks?time_range=' + time_range.short_term;
+    const url = window.location.protocol + "//" + window.location.host + '/api/api_topTracks?time_range=' + time_range.short_term;
     const response = await fetch(url);
     switch(response.status){
       case 200:
@@ -50,7 +50,7 @@ export default function TopTracks() {
       medium_term: "medium_term",
       long_term: "long_term"
     }
-    const url = 'http://localhost:3000/api/api_topTracks?time_range=' + time_range.medium_term;
+    const url = window.location.protocol + "//" + window.location.host + '/api/api_topTracks?time_range=' + time_range.medium_term;
     const response = await fetch(url);
     switch(response.status){
       case 200:
@@ -79,7 +79,7 @@ export default function TopTracks() {
       medium_term: "medium_term",
       long_term: "long_term"
     }
-    const url = 'http://localhost:3000/api/api_topTracks?time_range=' + time_range.long_term;
+    const url = window.location.protocol + "//" + window.location.host + '/api/api_topTracks?time_range=' + time_range.long_term;
     const response = await fetch(url);
     switch(response.status){
       case 200:
@@ -102,7 +102,7 @@ export default function TopTracks() {
     }   
   };
 async function checkIsLiked(id){
-  const url = 'http://localhost:3000/api/api_isliked?id=' + id;
+  const url = window.location.protocol + "//" + window.location.host + '/api/api_isliked?id=' + id;
   const response = await fetch(url);
   const data = await response.json();
   switch(response.status){

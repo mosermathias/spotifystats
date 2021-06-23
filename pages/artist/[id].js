@@ -64,7 +64,7 @@ export default function Artists({id}) {
     }
     
     const loadAudioFeatures = async() =>{
-      const url = 'http://localhost:3000/api/song/audio_features?id=' + artist_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/song/audio_features?id=' + artist_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -84,7 +84,7 @@ export default function Artists({id}) {
     }   
     }
     const loadArtist = async() =>{
-      const url = 'http://localhost:3000/api/artist/' + artist_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/artist/' + artist_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -108,7 +108,7 @@ export default function Artists({id}) {
       }   
     }
     const getTopTracks = async() =>{
-      const url = 'http://localhost:3000/api/artist/top-tracks?id=' + artist_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/artist/top-tracks?id=' + artist_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -128,7 +128,7 @@ export default function Artists({id}) {
       }   
     }
     const getAlbums = async() =>{
-        const url = 'http://localhost:3000/api/artist/albums?id=' + artist_id;
+        const url = window.location.protocol + "//" + window.location.host + '/api/artist/albums?id=' + artist_id;
         const response = await fetch(url);
         switch(response.status){
           case 200:
@@ -148,7 +148,7 @@ export default function Artists({id}) {
         }   
       }
       const getRelatedArtists = async() =>{
-        const url = 'http://localhost:3000/api/artist/related-artists?id=' + artist_id;
+        const url = window.location.protocol + "//" + window.location.host + '/api/artist/related-artists?id=' + artist_id;
         const response = await fetch(url);
         switch(response.status){
           case 200:

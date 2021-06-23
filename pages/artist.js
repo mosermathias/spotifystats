@@ -9,7 +9,7 @@ export default function Artist() {
 
   const loadArtist = async() =>{
     const artist_id = "3TVXtAsR1Inumwj472S9r4";
-    const url = 'http://localhost:3000/api/artist/' + artist_id;
+    const url = window.location.protocol + "//" + window.location.host + '/api/artist/' + artist_id;
     const response = await fetch(url);
     switch(response.status){
       case 200:

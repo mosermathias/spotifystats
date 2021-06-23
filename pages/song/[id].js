@@ -60,7 +60,7 @@ export default function Song({id}) {
     }
     
     const loadAudioFeatures = async() =>{
-      const url = 'http://localhost:3000/api/song/audio_features?id=' + song_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/song/audio_features?id=' + song_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -80,7 +80,7 @@ export default function Song({id}) {
     }   
     }
     const loadSong = async() =>{
-      const url = 'http://localhost:3000/api/song/' + song_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/song/' + song_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -104,7 +104,7 @@ export default function Song({id}) {
       }   
     }
     const getisLiked = async() =>{
-      const url = 'http://localhost:3000/api/api_isliked?id=' + song_id;
+      const url = window.location.protocol + "//" + window.location.host + '/api/api_isliked?id=' + song_id;
       const response = await fetch(url);
       switch(response.status){
         case 200:

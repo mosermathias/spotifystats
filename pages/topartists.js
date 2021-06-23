@@ -18,7 +18,7 @@ export default function TopArtists() {
       medium_term: "medium_term",
       long_term: "long_term"
     }
-    const url = 'http://localhost:3000/api/api_topArtists?time_range=' + time_range.short_term;
+    const url = window.location.protocol + "//" + window.location.host + '/api/api_topArtists?time_range=' + time_range.short_term;
     const response = await fetch(url);
     switch(response.status){
       case 200:
@@ -43,7 +43,7 @@ export default function TopArtists() {
         medium_term: "medium_term",
         long_term: "long_term"
       }
-      const url = 'http://localhost:3000/api/api_topArtists?time_range=' + time_range.medium_term;
+      const url = window.location.protocol + "//" + window.location.host + '/api/api_topArtists?time_range=' + time_range.medium_term;
       const response = await fetch(url);
       switch(response.status){
         case 200:
@@ -68,7 +68,7 @@ export default function TopArtists() {
           medium_term: "medium_term",
           long_term: "long_term"
         }
-        const url = 'http://localhost:3000/api/api_topArtists?time_range=' + time_range.long_term;
+        const url = window.location.protocol + "//" + window.location.host + '/api/api_topArtists?time_range=' + time_range.long_term;
         const response = await fetch(url);
         switch(response.status){
           case 200:
