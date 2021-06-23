@@ -7,8 +7,7 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 export default function Song() {
     const [change, setChange] = useState("");
     const handleChange = (event) => {
-        console.log(event.target.value);
-        setChange(event.target.value);
+        
       }
     function a(message){
         console.log(message);
