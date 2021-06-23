@@ -18,7 +18,6 @@ var generateRandomString = function(length) {
 const client_id = process.env.CLIENT_ID;
 const client_secret = process.env.CLIENT_SECRET;
 const redirect_uri = process.env.REDIRECT_URI;
-console.log(client_id);
 
 var stateKey = 'spotify_auth_state';
 
@@ -41,4 +40,3 @@ export default async(req, res) => {
     }));
   }
 
- 

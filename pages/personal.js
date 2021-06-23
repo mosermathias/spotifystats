@@ -7,6 +7,7 @@ export default function Song() {
   const [personal, setPersonal] = useState([]);
 
   const loadSong = async() =>{
+    alert(window.location.port);
     const song_id = "3IvMYBE7A3c7to1aEcfFJk";
     const url = 'http://localhost:3000/api/api_personal';
     const response = await fetch(url);
