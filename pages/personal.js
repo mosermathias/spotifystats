@@ -7,9 +7,9 @@ export default function Song() {
   const [personal, setPersonal] = useState([]);
 
   const loadSong = async() =>{
-    alert(window.location.port);
+    
     const song_id = "3IvMYBE7A3c7to1aEcfFJk";
-    const url = 'http://localhost:3000/api/api_personal';
+    const url = window.location.protocol + "//" + window.location.host + '/api/api_personal';
     const response = await fetch(url);
     switch(response.status){
       case 200:
@@ -55,7 +55,7 @@ export default function Song() {
              <li>explicit_content.filter_locked :{personal.explicit_content.filter_locked.toString()}</li>
              </ul>
 ) : (
-    <h1>Loading</h1>
+    <h1>Loadingg</h1>
   )}
         
     
