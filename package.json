@@ -1,0 +1,41 @@
+{
+  "name": "spotifystats_next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "bootstrap": "^4.6.0",
+    "browserify": "^17.0.0",
+    "canvas": "^2.8.0",
+    "chart.js": "^3.3.2",
+    "cookie": "^0.4.0",
+    "cookie-cutter": "^0.2.0",
+    "cookie-parser": "^1.4.5",
+    "cookies": "^0.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "extract-colors": "^1.1.18",
+    "html-react-parser": "^1.2.6",
+    "js-cookie": "^2.2.1",
+    "next": "^10.2.0",
+    "next-cookies": "^2.0.3",
+    "node-fetch": "^2.6.1",
+    "node-vibrant": "^3.1.6",
+    "querystring": "^0.2.1",
+    "react": "17.0.2",
+    "react-bootstrap": "^1.6.0",
+    "react-chartjs-2": "^3.0.3",
+    "react-dom": "17.0.2",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1"
+  }
+}
