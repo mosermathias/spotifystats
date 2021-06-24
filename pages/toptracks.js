@@ -55,7 +55,7 @@ export default function TopTracks() {
     switch(response.status){
       case 200:
         const data = await response.json();
-        setTopTracksMedium(data.items);
+        setTopTracksMedium(data);
         data.items.forEach(e => {
           //alert(e.id);
           //checkIsLiked(e.id);
@@ -180,7 +180,7 @@ async function checkIsLiked(id){
         <br></br>
         <ListGroup>
       {
-      topTracksMedium.map((m) => (
+      topTracksMedium.items.map((m) => (
         <Track
         rank = {m.rank}
         id = {m.id}
