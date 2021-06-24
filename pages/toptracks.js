@@ -142,7 +142,7 @@ async function checkIsLiked(id){
 
     <NavComponent></NavComponent>
     <br></br>
-    {topTracksShort.items ? (
+    {topTracksMedium.items ? (
       
     <div className={styles.container}>
       <h4>Your top Tracks</h4>
