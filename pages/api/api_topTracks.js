@@ -7,7 +7,7 @@ export default async (req, res) =>{
     var options = {
       headers: { 'Authorization': 'Bearer ' + access_token }
     };
-    //console.log(access_token);
+    console.log(access_token);
     try{
     switch (method) {
       case 'GET':
@@ -22,7 +22,7 @@ export default async (req, res) =>{
                 e.rank = x;
                 x++;
               });
-              console.log("test");
+              console.log("toptracks 200");
               res.status(200).json(json);
               break;
             case 401:

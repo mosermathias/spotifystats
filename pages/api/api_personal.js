@@ -6,7 +6,7 @@ export default async (req, res) =>{
     var options = {
       headers: { 'Authorization': 'Bearer ' + access_token }
     };
-    //console.log(access_token);
+    console.log(access_token);
     try{
     switch (method) {
       case 'GET':
@@ -17,6 +17,7 @@ export default async (req, res) =>{
           switch(response.status){
             case 200:
               res.status(200).json(json);
+              console.log("personal 200");
               break;
             case 401:
               res.status(401).json(json);
