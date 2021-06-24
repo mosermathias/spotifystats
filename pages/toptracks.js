@@ -13,6 +13,7 @@ export default function TopTracks() {
   const [topTracksMedium, setTopTracksMedium] = useState([]);
   const [topTracksLong, setTopTracksLong] = useState([]);
   const [isLiked, setIsLiked] = useState([]);
+
   const loadTopTracksShort = async() =>{
     const time_range = 
     {
@@ -55,7 +56,7 @@ export default function TopTracks() {
     switch(response.status){
       case 200:
         const data = await response.json();
-        setTopTracksMedium(data);
+        setTopTracksMedium(data.items);
         data.items.forEach(e => {
           //alert(e.id);
           //checkIsLiked(e.id);
@@ -132,7 +133,7 @@ async function checkIsLiked(id){
 };
 
   useEffect(() => {
-    //loadTopTracksShort();
+    loadTopTracksShort();
     loadTopTracksMedium();
     //loadTopTracksLong();
     
@@ -142,7 +143,7 @@ async function checkIsLiked(id){
 
     <NavComponent></NavComponent>
     <br></br>
-    {topTracksMedium.items ? (
+    {topTracksShort.items ? (
       
     <div className={styles.container}>
       <h4>Your top Tracks</h4>
@@ -180,7 +181,7 @@ async function checkIsLiked(id){
         <br></br>
         <ListGroup>
       {
-      topTracksMedium.items.map((m) => (
+      topTracksMedium.map((m) => (
         <Track
         rank = {m.rank}
         id = {m.id}
