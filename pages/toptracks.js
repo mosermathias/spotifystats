@@ -13,7 +13,6 @@ export default function TopTracks() {
   const [topTracksMedium, setTopTracksMedium] = useState([]);
   const [topTracksLong, setTopTracksLong] = useState([]);
   const [isLiked, setIsLiked] = useState([]);
-  var rank = "t";
   const loadTopTracksShort = async() =>{
     const time_range = 
     {
@@ -133,7 +132,7 @@ async function checkIsLiked(id){
 };
 
   useEffect(() => {
-    loadTopTracksShort();
+    //loadTopTracksShort();
     loadTopTracksMedium();
     //loadTopTracksLong();
     
