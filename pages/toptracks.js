@@ -23,6 +23,7 @@ export default function TopTracks() {
     }
     const url = window.location.protocol + "//" + window.location.host + '/api/api_topTracks?time_range=' + time_range.short_term;
     const response = await fetch(url);
+    alert(response.status);
     switch(response.status){
       case 200:
         const data = await response.json();
