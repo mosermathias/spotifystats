@@ -134,7 +134,7 @@ async function checkIsLiked(id){
 
   useEffect(() => {
     loadTopTracksShort();
-    //loadTopTracksMedium();
+    loadTopTracksMedium();
     //loadTopTracksLong();
     
   }, [])
